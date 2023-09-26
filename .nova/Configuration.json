@@ -1,4 +1,7 @@
 {
+  "index.ignored_file_patterns" : [
+    ".DS_Store"
+  ],
   "workspace.art_style" : 1,
   "workspace.color" : 3,
   "workspace.name" : "applecartoonist.squarespace.com"
