@@ -1,0 +1,103 @@
+// Social Media in Header
+
+.header-icon[href*="patreon"] {
+  background-color: @patreonColor;
+  border-radius: 20%;
+  position: relative;
+
+  &::before {
+    background: #fff;
+    box-sizing: border-box;
+    content: "";
+    display: block;
+    height: 15px;
+    left: 5px;
+    position: absolute;
+    top: 5px;
+    width: 3px;
+  }
+  
+  &::after {
+    background: #fff;
+    box-sizing: border-box;
+    border-radius: 100px;
+    content: "";
+    height: 10px;
+    left: 10px;
+    position: absolute;
+    top: 5px;
+    width: 10px;
+  }
+  
+  svg {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+.header-icon[href*="mastodon"] {
+  color: @black;
+
+  &::before {
+    .fontawesomeBrands;
+    content: "\f4f6";
+    margin-top: 0.1em;
+  }
+  
+  svg {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+// Social Media in Footer 
+
+.sqs-block-socialaccountlinks-v2 .sqs-svg-icon--wrapper[href*="patreon"] {
+  background-color: @patreonColor;
+  position: relative;
+
+  &::before {
+    background: #fff;
+    box-sizing: border-box;
+    content: "";
+    display: block;
+    height: 20px;
+    left: 10px;
+    position: absolute;
+    top: 8px;
+    width: 4px;
+  }
+  
+  &::after {
+    background: #fff;
+    box-sizing: border-box;
+    border-radius: 100px;
+    content: "";
+    height: 13px;
+    left: 16px;
+    position: absolute;
+    top: 8px;
+    width: 13px;
+  }  
+  svg {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+.sqs-block-socialaccountlinks-v2 .sqs-svg-icon--wrapper[href*="mastodon"] {
+  background-color: @black;
+  border-radius: 50%;
+  color: @white;
+
+  &::before {
+    .fontawesomeBrands;
+    content: "\f4f6";
+    margin-top: 0.13em;
+  }
+  
+  svg {
+    display: none;
+    visibility: hidden;
+  }
+}
