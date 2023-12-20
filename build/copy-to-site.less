@@ -1,6 +1,13 @@
 @white: hsl(0,0%,100%);
 @black: #222222;
 
+// Apple Cartoonist Color
+@yellow: #f3bb4b;
+@orange: #e6883b;
+@red: #ce4844;
+@green: #76b956;
+@blue: #459ad6;
+@purple: #8b4293;
 
 
 // Brand Colors
@@ -56,8 +63,7 @@
     position: absolute;
     top: 1px;
     transition: all ease .3s;
-    width: 84%;
-  }
+    width: 84%;  }
   
   &:hover {
     background: @backgroundHoverColor;
@@ -71,34 +77,10 @@
   }
 }
 
-//Thanks to https://codepen.io/bradleytaunt/pen/YvKxxm
-
-.header-actions-action--cta, .header-menu-cta {
-  .btn {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    border: 1px solid #0a72a0 !important;
-    background: #1a9ed9;
-    box-shadow: inset 0 13px 25px rgba(255,255,255,0.5), 0 3px 5px rgba(0,0,0,0.2), 0 10px 13px rgba(0,0,0,0.1);
-    text-shadow: 0 1px 2px #0a72a0;
-    transition: all ease .3s;
-    
-    &:before {
-      background: linear-gradient(rgba(255,255,255,0.7) 0%, rgba(255,255,255,0) 100%);
-      border-radius: 125px;
-      content:'';
-      height: 50%;
-      left: 4%;
-      position: absolute;
-      top: 1px;
-      transition: all ease .3s;
-      width: 92%;
-    }
-    
+.header-nav-item {
+  a {
     &:hover {
-      background: #0f75c0;
-      //box-shadow: inset 0 13px 25px rgba(255,255,255,0.8), 0 3px 5px rgba(0,0,0,0.2), 0 10px 13px rgba(0,0,0,0.2);
-      opacity: 1 !important;
+      color: @blue !important;
     }
   }
 }
@@ -120,44 +102,15 @@
   }
 }
 
-.newsletter-form-button-wrapper {
-  button {
-    .glassButton(#222, #222, #000, #444);
-  }
-}
-
-
 // Social Media in Header
 
 .header-icon[href*="patreon"] {
-  background-color: @patreonColor;
-  border-radius: 20%;
-  position: relative;
 
   &::before {
-    background: #fff;
-    box-sizing: border-box;
-    content: "";
-    display: block;
-    height: 15px;
-    left: 5px;
-    position: absolute;
-    top: 5px;
-    width: 3px;
+    .fontawesomeBrands;
+    content: "\f3d9";
   }
-  
-  &::after {
-    background: #fff;
-    box-sizing: border-box;
-    border-radius: 100px;
-    content: "";
-    height: 10px;
-    left: 10px;
-    position: absolute;
-    top: 5px;
-    width: 10px;
-  }
-  
+    
   svg {
     display: none;
     visibility: hidden;
@@ -182,32 +135,14 @@
 // Social Media in Footer 
 
 .sqs-block-socialaccountlinks-v2 .sqs-svg-icon--wrapper[href*="patreon"] {
-  background-color: @patreonColor;
-  position: relative;
 
   &::before {
-    background: #fff;
-    box-sizing: border-box;
-    content: "";
-    display: block;
-    height: 20px;
-    left: 10px;
-    position: absolute;
-    top: 8px;
-    width: 4px;
+    .fontawesomeBrands;
+    content: "\f3d9";
+    margin-top: 0.13em;
+    margin-left: 0.07em;
   }
   
-  &::after {
-    background: #fff;
-    box-sizing: border-box;
-    border-radius: 100px;
-    content: "";
-    height: 13px;
-    left: 16px;
-    position: absolute;
-    top: 8px;
-    width: 13px;
-  }  
   svg {
     display: none;
     visibility: hidden;
@@ -229,4 +164,31 @@
     display: none;
     visibility: hidden;
   }
+}
+
+
+.header-actions-action--cta .btn, 
+.header-menu-cta .btn,
+.sqs-block-button-element,
+.newsletter-form-button-wrapper button,
+.form-button-wrapper button {
+	border-color: @black !important;
+	box-shadow: -5px 5px 0 0 fadeout(@black, 90%);
+	// margin: 0 0 0 0;
+	transition: all ease-in-out 0.15s;
+	
+	&:hover {
+	  box-shadow: 0 0 0 0 fadeout(@black, 100%);
+	  left: -5px;
+	  // margin: 5px 0 0 -5px;
+	  position: relative;
+	  opacity: 1 !important;
+	  top: 5px;
+	  transition: all ease-in-out 0.15s;
+	}
+}
+
+.header-actions-action--cta .btn, 
+.header-menu-cta .btn {
+	border-color: @black;
 }

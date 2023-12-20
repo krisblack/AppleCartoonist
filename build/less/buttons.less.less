@@ -1,0 +1,25 @@
+.header-actions-action--cta .btn, 
+.header-menu-cta .btn,
+.sqs-block-button-element,
+.newsletter-form-button-wrapper button,
+.form-button-wrapper button {
+	border-color: @black !important;
+	box-shadow: -5px 5px 0 0 fadeout(@black, 90%);
+	// margin: 0 0 0 0;
+	transition: all ease-in-out 0.15s;
+	
+	&:hover {
+	  box-shadow: 0 0 0 0 fadeout(@black, 100%);
+	  left: -5px;
+	  // margin: 5px 0 0 -5px;
+	  position: relative;
+	  opacity: 1 !important;
+	  top: 5px;
+	  transition: all ease-in-out 0.15s;
+	}
+}
+
+.header-actions-action--cta .btn, 
+.header-menu-cta .btn {
+	border-color: @black;
+}
