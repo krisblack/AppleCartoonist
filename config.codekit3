@@ -55,6 +55,14 @@
       "oAP" : "\/build\/copy-to-site.less",
       "oF" : 0
     },
+    "\/less\/blog.less.kit" : {
+      "cB" : 0,
+      "ft" : 2048,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/less\/blog.less.less",
+      "oF" : 0
+    },
     "\/less\/buttons.less.kit" : {
       "cB" : 0,
       "ft" : 2048,
